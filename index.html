@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="text/javascript" src="fullpage.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //options here
+                autoScrolling:true,
+                scrollHorizontally: true,
+                anchors: ['1Page', '2Page', '3Page','4Page','5Page'],
+                menu: '#myMenu',
+                navigation: true,
+                navigationPosition: 'right'
+            });   
+            
+            $('.close3').click(function(){
+                $('.title').hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul id="myMenu">
+        <li data-menuanchor="1Page"><a href="#1Page">First section</a></li>
+        <li data-menuanchor="2Page"><a href="#2Page">Second section</a></li>
+        <li data-menuanchor="3Page"><a href="#3Page">Third section</a></li>
+        <li data-menuanchor="4Page"><a href="#4Page">Third section</a></li>
+        <li data-menuanchor="5Page"><a href="#5Page">Third section</a></li>
+    </ul>
+
+    <div id="fullpage">
+        <div class="section">Some section1
+
+            <br>Lorem, ipsum dolor.
+        </div>
+        <div class="section">Some section2</div>
+        <div class="section">
+            <video src="flowers.mp4" loop muted controls></video>
+            <div class="title">
+                <h2>Lorem, ipsum dolor.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit ut a incidunt sapiente illum sint in! Voluptate quibusdam repellendus delectus.</p>
+                <span><a href="#" class="close3">close</a></span>
+            </div>
+        </div>
+        <div class="section">Some section4</div>
+        <div class="section">Some section5</div>
+    </div>
+</body>
+</html>
